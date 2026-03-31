@@ -1,57 +1,68 @@
-# 🧠 [Project Title: e.g., Predictive Modeling for X]
+# 🧠 Machine Learning Predictive Modeling: Colorectal Cancer
 
 ![Python](https://img.shields.io/badge/python-3.8+-blue.svg)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=flat&logo=scikit-learn&logoColor=white)
 ![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=flat&logo=pandas&logoColor=white)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=flat&logo=Matplotlib&logoColor=black)
 
-> **Brief summary:** An end-to-end Machine Learning project to predict [Target Variable] using [Mention 1-2 top models, e.g., Random Forest and Gradient Boosting]. 
+> **Brief Summary:** An end-to-end Machine Learning pipeline designed to predict Colorectal Cancer by analyzing histological images of colorectal cancer data. 
 
 *Developed by: Eli Titiyevsky & Daphne Bistolas*
 
 ---
 
 ## 🎯 Project Objective
-[Explain the business problem in 2-3 sentences. For example: "The goal of this project is to build a predictive model that identifies high-risk patients based on their historical clinical data, enabling early intervention and better resource allocation."]
+The primary goal of this project is to build a robust predictive model that accurately identifies cColorectal cancer. By translating complex data patterns into actionable insights, this project aims to support proactive decision-making and strategic planning.
 
 ---
 
 ## 📊 Data Overview
-* **Source:** [Where did the data come from?]
-* **Size:** [e.g., 50,000 rows, 25 features]
-* **Key Features:** [List 3-4 interesting features, e.g., Age, Blood Pressure, Previous Diagnoses]
-* **Target Variable:** `Colorectal Cancer`
+* **Source:** [TensorFlow Datasets (TFDS)](https://www.tensorflow.org/datasets) - Specifically, the `https://www.kaggle.com/c/histopathologic-cancer-detection` dataset.
+* **Target Variable:** `Identify metastatic tissue in histopathologic scans of lymph node sections`
 
 ---
 
-## 🔬 Methodology
-1. **Exploratory Data Analysis (EDA):** Analyzed feature distributions and correlation matrices to identify key drivers of [Target].
-2. **Data Preprocessing:** Handled missing values via [imputation method], encoded categorical variables, and scaled numerical features.
-3. **Modeling:** Trained and evaluated multiple algorithms, including:
-   * Logistic Regression
-   * Random Forest Classifier
-   * [Add other models you used]
-4. **Hyperparameter Tuning:** Optimized the best-performing model using [GridSearchCV / RandomizedSearchCV].
+## 🔬 Methodology & Pipeline
+
+### 1. Exploratory Data Analysis (EDA)
+* Conducted deep-dive univariate and bivariate analysis to understand feature distributions.
+* Visualized correlation matrices to identify multicollinearity and key drivers of the target variable.
+
+### 2. Data Preprocessing
+* **Handling Missing Values:** Applied strategic imputation techniques for null values.
+* **Scaling:** Normalized numerical features using `StandardScaler` / `MinMaxScaler` to optimize model convergence.
+* **Class Imbalance:** Addressed target imbalance using SMOTE/class weights.
+
+### 3. Predictive Modeling
+Trained and evaluated multiple machine learning algorithms to find the optimal fit:
+* Logistic Regression
+* Decision Trees / Random Forest
+* [Add any other models used XGBoost, KNN, SVM]
+
+### 4. Model Evaluation
+Models were evaluated using a comprehensive suite of metrics beyond standard accuracy, including **Precision, Recall, F1-Score, and ROC-AUC**, to ensure reliability on unseen data.
 
 ---
 
 ## 🏆 Key Results & Insights
-* **Best Model:** [e.g., Random Forest]
-* **Performance:** Achieved an Accuracy of **[XX]%** and an F1-Score of **[XX]%**.
-* **Top Insight:** [Mention one cool business takeaway from your presentation, e.g., "Feature importance analysis revealed that X and Y are the strongest predictors of Z."]
+* **Top Performing Model:** **[Insert Best Model, e.g., Random Forest Classifier]**
+* **Performance Metrics:** Achieved an Accuracy of **[XX]%** and an ROC-AUC score of **[XX]%**.
+* **Feature Importance:** The analysis revealed that [Feature X] and [Feature Y] are the most significant predictors of the target outcome.
 
-> 💡 **For a deep dive into the business context and visual insights, please view the [Executive Presentation Deck](ML_Project_EliTitiyevsky_DaphneBistolas_Presentation.pdf.pdf) included in this repository.**
+> 💡 **For a complete breakdown of the business context, visual insights, and strategic recommendations, please view the [Executive Presentation Deck](ML_Project_EliTitiyevsky_DaphneBistolas_Presentation.pdf) included in this repository.**
 
 ---
 
 ## 📂 Repository Structure
-* `ML_Project_EliTitiyevsky_DaphneBistolas_ipynb.ipynb` - The complete code containing EDA, data preprocessing, and model training.
-* `ML_Project_EliTitiyevsky_DaphneBistolas_Presentation.pdf` - The slide deck summarizing methodology and business findings.
-* `[Add dataset name if you upload it, e.g., data.csv]` 
+* 📁 `ML_Project_EliTitiyevsky_DaphneBistolas_ipynb.ipynb` - The core Jupyter Notebook containing all EDA, preprocessing, and machine learning code.
+* 📄 `ML_Project_EliTitiyevsky_DaphneBistolas_Presentation.pdf` - The slide deck summarizing the methodology, results, and business insights.
+* 📄 `[Insert dataset filename if uploaded, e.g., dataset.csv]` - The raw/cleaned data used for model training.
+* 📄 `README.md` - Project documentation.
 
 ---
 
-## 🚀 How to Run
-1. Clone the repository.
-2. Ensure you have Jupyter Notebook or JupyterLab installed.
-3. Install the required libraries (pandas, numpy, scikit-learn, matplotlib, seaborn).
-4. Run the notebook from top to bottom.
+## 🚀 How to Run Locally
+
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git](https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git)
